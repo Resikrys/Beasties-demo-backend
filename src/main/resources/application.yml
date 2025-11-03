@@ -16,7 +16,9 @@ spring:
 
 jwt:
   secret: ${JWT_SECRET:replace_me}
+#  secret: ${JWT_SECRET:Q3VhbHF1aWVyQ2xhdmVTZWNyZXRhbGdhQ29uMjgxMzIxTWlFbmNvZGluZ1Bva1JvY2tldExlZ2VuZGEK}
   validity-ms: 3600000 # 1 hour
+  # 86400000 = 24 hours in milliseconds
 
 logging:
   level:
