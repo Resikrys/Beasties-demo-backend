@@ -15,7 +15,7 @@ Demo project for a collectible creature management game
 - MVC
 - Entity - DTO - Mappers
 ```
-src/main/java/com/beasties-backend
+src/main/java/com/beasties/beasties_backend
 ├─ config
 ├─ domain
 │   ├─ model
