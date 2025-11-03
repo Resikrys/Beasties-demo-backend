@@ -14,6 +14,23 @@ Demo project for a collectible creature management game
 - DDD
 - MVC
 - Entity - DTO - Mappers
+```
+src/main/java/com/beasties-backend
+├─ config
+├─ domain
+│   ├─ model
+│   └─ repository
+├─ application
+│   ├─ dto
+│   └─ mapper
+├─ security
+│   ├─ jwt
+│   └─ service
+├─ web
+│   └─ controller
+└─ shared
+└─ exception
+```
 
 ### API ENDPOINTS REFERENCE
 **Controllers & endpoints**:
