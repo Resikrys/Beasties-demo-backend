@@ -32,6 +32,12 @@ src/main/java/com/beasties/beasties_backend
 └─ exception
 ```
 
+---
+### API ENDPOINTS REFERENCEConfiguration
+```
+docker-compose up -d
+```
+
 ### API ENDPOINTS REFERENCE
 **Controllers & endpoints**:
 - **authController**
