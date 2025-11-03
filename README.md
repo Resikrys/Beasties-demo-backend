@@ -55,8 +55,12 @@ Demo project for a collectible creature management game
 - Tasks: training, modify stats
 - Eat: stat modifier
 
-## 📚 Additional Resources
-- [JWT](https://www.geeksforgeeks.org/springboot/spring-boot-3-0-jwt-authentication-with-spring-security-using-mysql-database/)
+- **REFACTOR**:
+  - .ENV 
+  - JWT_SECRET (save in secret/vault in production --> more protection)
 
+## 📚 Additional Resources
+- [JWT + Spring boot](https://www.geeksforgeeks.org/springboot/spring-boot-3-0-jwt-authentication-with-spring-security-using-mysql-database/)
+- [JWT](https://www.geeksforgeeks.org/web-tech/json-web-token-jwt/)
 
 [Back to top](#top)
