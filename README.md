@@ -54,3 +54,9 @@ Demo project for a collectible creature management game
 - Map: grid, quest randomizer
 - Tasks: training, modify stats
 - Eat: stat modifier
+
+## 📚 Additional Resources
+- [JWT](https://www.geeksforgeeks.org/springboot/spring-boot-3-0-jwt-authentication-with-spring-security-using-mysql-database/)
+
+
+[Back to top](#top)
