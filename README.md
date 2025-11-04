@@ -72,7 +72,7 @@ docker-compose up -d
 
 ### JWT
 - **Password Encoder**: BCryptPasswordEncoder
-- JwtTokenProvider: creates/verifies tokens, signs with HMAC 
+- **JwtTokenProvider**: creates/verifies tokens, signs with HMAC 
 secret (or RSA if desired).
 - **JwtAuthenticationFilter**: extracts Authorization header, 
 validates JWT, loads UserDetails via UserDetailsService.
