@@ -70,6 +70,20 @@ docker-compose up -d
 
 ---
 
+### JWT
+- **Password Encoder**: BCryptPasswordEncoder
+- JwtTokenProvider: creates/verifies tokens, signs with HMAC 
+secret (or RSA if desired).
+- **JwtAuthenticationFilter**: extracts Authorization header, 
+validates JWT, loads UserDetails via UserDetailsService.
+- **CustomUserDetailsService**: loads user from database 
+(UserRepository).
+- **SecurityConfig**: configures HTTP security, public endpoints 
+such as "/api/auth/**", Swagger, and H2 console if applicable; 
+the rest require authentication.
+
+---
+
 ### Notes (features to be implemented):
 - User login system (ROL_USER / ROL_ADMIN)
 - Creatures: adopt, modify details, view collection and delete
