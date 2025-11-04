@@ -1,4 +1,4 @@
-package com.beasties.beasties_backend.web.exception;
+package com.beasties.beasties_backend.shared.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
   public ResourceNotFoundException(String resource, Object id) {

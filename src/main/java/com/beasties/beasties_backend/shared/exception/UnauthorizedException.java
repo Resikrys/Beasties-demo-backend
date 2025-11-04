@@ -1,4 +1,4 @@
-package com.beasties.beasties_backend.web.exception;
+package com.beasties.beasties_backend.shared.exception;
 
 public class UnauthorizedException extends RuntimeException {
     public UnauthorizedException(String message) {
