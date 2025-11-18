@@ -1,26 +1,22 @@
-server:
-  port: 8080
-
 spring:
+  application:
+    name: Besties-demo
+
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/beasties?useSSL=false&serverTimezone=UTC}
-    username: ${SPRING_DATASOURCE_USERNAME:beasties}
-    password: ${SPRING_DATASOURCE_PASSWORD:beasties}
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://db:3306/beasties_db?useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${SPRING_DATASOURCE_USERNAME:beasties_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:beasties_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+
     properties:
       hibernate:
-        format_sql: false
-    show-sql: false
+        dialect: org.hibernate.dialect.MySQLDialect
+        show-sql: true
 
 jwt:
-#  secret: ${JWT_SECRET:replace_me}
-  secret: ${JWT_SECRET:Q3VhbHF1aWVyQ2xhdmVTZWNyZXRhbGdhQ29uMjgxMzIxTWlFbmNvZGluZ1Bva1JvY2tldExlZ2VuZGEK}
-  validity-ms: 3600000 # 1 hour
-  # 86400000 = 24 hours in milliseconds
-
-logging:
-  level:
-    root: INFO
-    com.beasties: DEBUG
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  validity-ms: 86400000
