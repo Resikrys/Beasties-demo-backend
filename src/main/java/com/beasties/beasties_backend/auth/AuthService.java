@@ -1,5 +1,8 @@
 package com.beasties.beasties_backend.auth;
 
+import com.beasties.beasties_backend.auth.dto.JwtResponseDTO;
+import com.beasties.beasties_backend.auth.dto.LoginRequestDTO;
+import com.beasties.beasties_backend.auth.dto.RegisterRequestDTO;
 import com.beasties.beasties_backend.auth.jwt.JwtUtils;
 import com.beasties.beasties_backend.user.User;
 import com.beasties.beasties_backend.user.UserRepository;
