@@ -1,5 +1,6 @@
 package com.beasties.beasties_backend.auth;
 
+import com.beasties.beasties_backend.auth.jwt.JwtUtils;
 import com.beasties.beasties_backend.user.User;
 import com.beasties.beasties_backend.user.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
