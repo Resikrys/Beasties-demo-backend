@@ -12,5 +12,5 @@ public class TaskDTO {
     private String description;
     private Stat statToImprove;
     private int durationMinutes;
-    private int staminaCost; // Added stamina cost
+    private int staminaCost;
 }
