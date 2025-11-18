@@ -1,5 +1,6 @@
 package com.beasties.beasties_backend.user;
 
+import com.beasties.beasties_backend.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 

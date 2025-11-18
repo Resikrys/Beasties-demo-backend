@@ -1,5 +1,6 @@
 package com.beasties.beasties_backend.user;
 
+import com.beasties.beasties_backend.auth.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
