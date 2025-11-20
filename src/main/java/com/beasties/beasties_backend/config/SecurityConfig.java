@@ -38,16 +38,18 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                                .requestMatchers("/api/v1/auth/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/api/v1/auth/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
 
-                                .requestMatchers("/api/v1/admin/**", "/api/v1/quests/**").hasRole("ADMIN")
+                        .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
 
-                                .requestMatchers("/api/v1/beasties/**", "/api/v1/tasks/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/v1/quests/**").hasAnyRole("USER", "ADMIN")
 
-                                .anyRequest().authenticated()
+                        .requestMatchers("/api/v1/beasties/**", "/api/v1/tasks/**").hasAnyRole("USER", "ADMIN")
+
+                        .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // JWT es sin estado
                 )
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
