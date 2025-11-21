@@ -29,11 +29,13 @@ across a map. The application implements design patterns
   Spring Boot validation starter.
 - **OpenAPI/Swagger UI**: For documenting and testing endpoints
   (if included in your Spring Boot 3+ pom.xml).
+- **Cors**: to connect frontend (typescript) with backend (java) projects.
 
 ---
 
 ## Project structure
-- MVC (Entity - DTO - Mappers)
+- Client / Server (Frontend project / API rest project)
+- MVC (Entity - DTO - Controllers)
 - Contexts:
   - **Auth**
   - **Beastie**
@@ -53,7 +55,7 @@ Postman or by accessing the Swagger documentation.
 1. 🚀 Start the Server
    Open the project in your IDE (IntelliJ IDEA).
 
-Run the main Spring Boot class (```BestiesDemoApplication.java```).
+Run the main Spring Boot class (```BeastiesBackendApplication.java```).
 
 The server will start, typically at ```http://localhost:8080```.
 
@@ -152,15 +154,20 @@ docker-compose up -d
   - User login system (ROL_USER / ROL_ADMIN), user control (view and delete users by admin)
   - Beasties: adopt, view collection and delete, rename, stats modifiers, experience and level up
   - Quests: assign, complete, rewards & create, update and delete quests
-  - Map: grid, quest randomizer
-  - Tasks: assign task (training - modify stats)
+  - Map: interactive grid, quest randomizer, progression bar timer
+  - Tasks: assign task (training - modify stats), progression bar timer
   - Item: consume candy (stat modifier)
 
 - **To be implemented**:
   - .ENV
   - JWT_SECRET (save in secret/vault in production --> more protection)
   - Beasties: modify details
+---
 
+### FRONTEND REPOSITORY:
+[Beasties frontend](https://github.com/Resikrys/Beasties-frontend)
+
+---
 
 ## 📚 Additional Resources
 - [JWT + Spring boot](https://www.geeksforgeeks.org/springboot/spring-boot-3-0-jwt-authentication-with-spring-security-using-mysql-database/)
