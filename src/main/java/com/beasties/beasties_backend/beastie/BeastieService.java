@@ -121,6 +121,19 @@ public class BeastieService {
         return beastieMapper.toDTO(updatedBeastie);
     }
 
+    public BeastieDTO cheerUpBeastie(Long beastieId, Long userId) {
+        Beastie beastie = beastieRepository.findByIdAndOwnerId(beastieId, userId)
+                .orElseThrow(() -> new ResourceNotFoundException("Beastie", "id", beastieId));
+
+        if (!beastie.isSad()) {
+            throw new IllegalStateException("This beastie is not sad!");
+        }
+
+        beastie.setSad(false);
+        Beastie updatedBeastie = beastieRepository.save(beastie);
+        return beastieMapper.toDTO(updatedBeastie);
+    }
+
     // --- (ADMIN) ---
 
     /**

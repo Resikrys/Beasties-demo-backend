@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 public class BeastieMapper {
 
     public BeastieDTO toDTO(Beastie beastie) {
+        int expRequired = beastie.getLevel() * 100;
+
         return BeastieDTO.builder()
                 .id(beastie.getId())
                 .name(beastie.getName())
@@ -21,6 +23,8 @@ public class BeastieMapper {
                 .isInTeam(beastie.isInTeam())
                 .isSad(beastie.isSad())
                 .ownerId(beastie.getOwner().getId())
+                .experience(beastie.getExperience())
+                .experienceRequired(expRequired)
                 .build();
     }
 }

@@ -20,4 +20,6 @@ public class BeastieDTO {
     private boolean isInTeam;
     private boolean isSad;
     private Long ownerId;
+    private int experience;
+    private int experienceRequired;
 }
